@@ -17,7 +17,7 @@ module.exports = {
         },
         linux: {
           target: {
-            target: 'deb',
+            target: 'appimage',
             arch: ['armv7l']
           },
           category: 'Utility'
