@@ -7,7 +7,12 @@
       </f7-nav-left>
       <f7-nav-title sliding>My App</f7-nav-title>
       <f7-nav-right>
-        <f7-link icon-ios="f7:menu" icon-aurora="f7:menu" icon-md="material:menu" panel-open="right"></f7-link>
+        <f7-link
+          icon-ios="f7:menu"
+          icon-aurora="f7:menu"
+          icon-md="material:menu"
+          panel-open="right"
+        ></f7-link>
       </f7-nav-right>
       <f7-nav-title-large sliding>My App</f7-nav-title-large>
     </f7-navbar>
@@ -56,15 +61,8 @@
         title="Dynamic (Component) Route"
         link="/dynamic-route/blog/45/post/125/?foo=bar#about"
       ></f7-list-item>
-      <f7-list-item
-        title="Default Route (404)"
-        link="/load-something-that-doesnt-exist/"
-      ></f7-list-item>
-      <f7-list-item
-        title="Request Data & Load"
-        link="/request-and-load/user/123456/"
-      ></f7-list-item>
+      <f7-list-item title="Default Route (404)" link="/load-something-that-doesnt-exist/"></f7-list-item>
+      <f7-list-item title="Request Data & Load" link="/request-and-load/user/123456/"></f7-list-item>
     </f7-list>
-
   </f7-page>
 </template>
