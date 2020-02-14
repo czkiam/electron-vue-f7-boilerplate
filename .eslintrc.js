@@ -10,6 +10,7 @@ module.exports = {
     'vue/html-self-closing': 'off',
     "vue/singleline-html-element-content-newline": "off",
     "vue/max-attributes-per-line":"off",
+    "vue/mustache-interpolation-spacing":"off",
     // allow async-await
     'generator-star-spacing': 'off',
     // allow debugger during development
