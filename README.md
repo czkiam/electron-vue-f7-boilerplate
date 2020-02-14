@@ -1,4 +1,4 @@
-# my-new-app-vue
+# Electron Vue.js Framework7 Boilerplate
 
 ## Project setup
 ```
