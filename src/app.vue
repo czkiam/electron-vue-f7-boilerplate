@@ -72,7 +72,7 @@
   </f7-app>
 </template>
 <script>
-import routes from './routes.js';
+import routes from './routes.js'
 
 export default {
   data() {
@@ -89,41 +89,41 @@ export default {
       // Login screen data
       username: '',
       password: ''
-    };
+    }
   },
   mounted() {
     this.$f7ready(f7 => {
       // Call F7 APIs here
-      var sqlite3 = require('sqlite3').verbose();
-      var db = new sqlite3.Database('./database.sqlite3');
+      var sqlite3 = require('sqlite3').verbose()
+      var db = new sqlite3.Database('./database.sqlite3')
 
       db.serialize(function() {
-        db.run('CREATE TABLE lorem (info TEXT)');
+        db.run('CREATE TABLE lorem (info TEXT)')
 
-        var stmt = db.prepare('INSERT INTO lorem VALUES (?)');
+        var stmt = db.prepare('INSERT INTO lorem VALUES (?)')
         for (var i = 0; i < 10; i++) {
-          stmt.run('Ipsum ' + i);
+          stmt.run('Ipsum ' + i)
         }
 
-        stmt.finalize();
+        stmt.finalize()
 
-        var rows = document.getElementById('database');
+        var rows = document.getElementById('database')
         db.each('SELECT rowid AS id, info FROM lorem', function(err, row) {
-          var item = document.createElement('li');
-          item.textContent = '' + row.id + ': ' + row.info;
-          rows.appendChild(item);
-        });
-      });
+          var item = document.createElement('li')
+          item.textContent = '' + row.id + ': ' + row.info
+          rows.appendChild(item)
+        })
+      })
 
-      db.close();
-    });
+      db.close()
+    })
   },
   methods: {
     alertLoginData() {
       this.$f7.dialog.alert('Username: ' + this.username + '<br>Password: ' + this.password, () => {
-        this.$f7.loginScreen.close();
-      });
+        this.$f7.loginScreen.close()
+      })
     }
   }
-};
+}
 </script>
